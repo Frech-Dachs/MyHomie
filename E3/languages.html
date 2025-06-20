@@ -12,7 +12,9 @@
     <header>
       <nav>
         <h1>MyHomie</h1>
-        <div>
+        <!-- Hamburger Button -->
+        <button class="burger" id="burger">&#9776;</button>
+        <div class="nav-links" id="nav-links">
           <a href="../index.html">Startseite</a>
           <a href="about.html">About</a>
           <a href="module.html">Module</a>
@@ -68,5 +70,13 @@
     </main>
     <aside>this is my project</aside>
     <footer>© Leon Troller 2025 MyHomie</footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav-links");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="My own Portfolio" />
-    <meta name="keywords" content="Webseite, Portfolio, Schule" />
-    <meta name="autor" content="Leon Troller" />
+    <meta charset="UTF-8">
+    <meta name="description" content="My own Portfolio">
+    <meta name="keywords" content="Webseite, Portfolio, Schule">
+    <meta name="autor" content="Leon Troller">
     <title>MyHomie</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <header>
       <nav>
         <h1>MyHomie</h1>
-        <div>
+        <!-- Hamburger Button -->
+        <button class="burger" id="burger">&#9776;</button>
+        <div class="nav-links" id="nav-links">
           <a href="../index.html">Startseite</a>
           <a href="about.html" class="aktuelle-seite">About</a>
           <a href="module.html">Module</a>
           <a href="languages.html">Languages</a>
           <a href="../E4/formular.html">Sign in</a>
           <a href="../E6/verteiler.html">Verteiler</a>
-
           <a
             href="https://www.apple.com"
             target="_blank"
@@ -46,5 +47,13 @@
     </main>
     <aside>this is my project</aside>
     <footer>© Leon Troller 2025 MyHomie</footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav-links");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
